@@ -1,0 +1,26 @@
+# Dépendances
+node_modules/
+
+# Fichiers de build
+/frontend/dist
+/backend/dist
+
+# Fichiers d'environnement
+.env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+
+# Fichiers système
+.DS_Store
+Thumbs.db
+
+# Fichiers d'IDE
+.idea/
+.vscode/
+
+# Autres
+*.tmp
+*.bak
