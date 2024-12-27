@@ -13,6 +13,4 @@ export class UserController {
       res.status(500).json({ message: "Error fetching users" });
     }
   }
-
-
 }
