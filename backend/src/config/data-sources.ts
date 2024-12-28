@@ -8,5 +8,5 @@ export const AppDataSource = new DataSource({
     url: process.env.DATABASE_URL,
     entities: ["src/models/**/*.ts"],
     synchronize: true,
-    logging: true,
+    logging: false,
 });

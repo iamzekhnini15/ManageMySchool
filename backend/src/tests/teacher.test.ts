@@ -16,4 +16,17 @@ describe("Teacher API", () => {
         expect(res.status).toBe(200);
         expect(Array.isArray(res.body)).toBeTruthy();
     });
+    it("should not add duplicate teacher", async () => {
+        const teacherData = {
+            name: "Test Teacher",
+            speciality: "Test Speciality",
+            qualification: "Test Qualification",
+            teaching_preferences: { test: "test" }
+        };
+        await request(app).post("/api/teachers/addTeacher").send(teacherData);
+        const res = await request(app).post("/api/teachers/addTeacher").send(teacherData);
+        expect(res.status).toBe(409);
+        expect(res.body.message).toBe("Teacher already exists");
+    });
+    
 });
