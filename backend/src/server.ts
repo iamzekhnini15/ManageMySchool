@@ -3,7 +3,8 @@ import { AppDataSource } from "./config/data-sources";
 import app from "./app";
 import { seedRoles } from "./seedRoles";
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 5000;
+
 
 AppDataSource.initialize()
   .then(async () => {
@@ -16,4 +17,5 @@ AppDataSource.initialize()
   .catch((err) => {
     console.error("Error during Data Source initialization", err);
   });
+
 
