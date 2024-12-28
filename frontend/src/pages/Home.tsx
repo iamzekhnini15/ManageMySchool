@@ -10,6 +10,7 @@ import {
 } from "@nextui-org/react";
 import { LayoutGroup } from 'framer-motion';
 import { ThemeSwitcher } from '../components/ThemeSwitcher';
+import Header from '../components/Header';
 
 const CreateClassForm = (e: any) => {
 
@@ -54,7 +55,7 @@ const CreateClassForm = (e: any) => {
 
     return (
         <LayoutGroup>
-            <ThemeSwitcher />
+            <Header />
             <Card className="p-6 max-w-xl mx-auto">
                 <h2 className="text-2xl font-bold mb-4">Create New Class</h2>
                 <form onSubmit={handleSubmit}>

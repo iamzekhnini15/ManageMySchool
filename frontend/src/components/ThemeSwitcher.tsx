@@ -13,7 +13,6 @@ export const ThemeSwitcher = () => {
     <Switch
       defaultSelected={theme === 'dark'}
       size="lg"
-      color="secondary"
       startContent={<SunIcon className="h-6 w-6" />}
       endContent={<MoonIcon className="h-6 w-6" />}
       onChange={handleThemeChange}
