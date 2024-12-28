@@ -1,4 +1,4 @@
-import { Entity, PrimaryGeneratedColumn, Column, ManyToOne, OneToMany } from "typeorm";
+import { Entity, PrimaryGeneratedColumn, Column, ManyToOne, OneToMany, JoinColumn } from "typeorm";
 import { Teacher } from "./Teacher";
 import { StudentClass } from "./StudentClass";
 import { Course } from "./Course";
@@ -25,7 +25,8 @@ export class Class {
     max_students: number;
 
     @ManyToOne(() => Teacher, teacher => teacher.classes)
-    teacher: Teacher;
+    @JoinColumn({ name: "teacherId" })
+    teacherId: string;
 
     @OneToMany(() => StudentClass, studentClass => studentClass.class)
     studentClasses: StudentClass[];

@@ -27,7 +27,7 @@ export class Teacher {
     @Column("jsonb", { nullable: true })
     teaching_preferences: object;
 
-    @OneToMany(() => Class, class_ => class_.teacher)
+    @OneToMany(() => Class, class_ => class_.teacherId)
     classes: Class[];
 
     @OneToMany(() => Course, course => course.teacher)
