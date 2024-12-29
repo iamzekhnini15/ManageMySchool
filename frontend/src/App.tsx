@@ -4,6 +4,7 @@ import { AuthProvider } from './context/AuthContext';
 
 
 import Home from './pages/Home';
+import CreateStudent from './pages/createStudent';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Router>
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/createStudent" element={<CreateStudent />} />
           </Routes>
         </Router>
       </NextUIProvider>
