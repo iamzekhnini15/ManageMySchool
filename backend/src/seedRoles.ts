@@ -3,7 +3,6 @@ import { Role } from "./models/User_role"
 
 export async function seedRoles() {
     const roleRepository = AppDataSource.getRepository(Role);
-    
     const rolesWithPermissions = [
         {
             name: 'student',
@@ -29,7 +28,6 @@ export async function seedRoles() {
             }
         }
     ];
-    
     for (const roleData of rolesWithPermissions) {
         const existingRole = await roleRepository.findOne({ where: { role_name: roleData.name } });
         if (!existingRole) {

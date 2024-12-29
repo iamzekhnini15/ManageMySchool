@@ -9,6 +9,7 @@ import Home from './pages/public/Home';
 import About from './pages/public/About';
 import Class from './pages/admin/Classes';
 import Teachers from './pages/admin/Teachers';
+import CreateStudent from './pages/createStudent';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
             <Route element={<AuthenticatedLayout />}>
               <Route path="/classes" element={<Class />} />
               <Route path="/teachers" element={<Teachers />} />
+              <Route path="/createStudent" element={<CreateStudent />} />
             </Route>
           </Routes>
         </Router>
