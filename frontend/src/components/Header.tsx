@@ -11,6 +11,7 @@ import {
     Button
 } from "@nextui-org/react";
 import { ThemeSwitcher } from "./ThemeSwitcher";
+import { useLocation } from "react-router-dom";
 
 const AcmeLogo: React.FC = () => (
     <svg fill="none" height="36" viewBox="0 0 32 32" width="36">
@@ -27,6 +28,7 @@ const Header: React.FC = () => {
     const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
     const [isVisible, setIsVisible] = useState<boolean>(true);
     const [lastScrollY, setLastScrollY] = useState<number>(0);
+    const location = useLocation();
 
     const menuItems: string[] = [
         "Profile",
@@ -39,6 +41,14 @@ const Header: React.FC = () => {
         "Team Settings",
         "Help & Feedback",
         "Log Out",
+    ];
+
+    const navbarItems = [
+        { title: "About", link: "/about" },
+        { title: "MMS", link: "/mms" },
+        { title: "Contact", link: "/contact" },
+        { title: "Classes", link: "/classes" },
+        { title: "Teachers", link: "/teachers" },
     ];
 
     useEffect(() => {
@@ -74,21 +84,16 @@ const Header: React.FC = () => {
             </NavbarContent>
 
             <NavbarContent className="hidden sm:flex gap-4" justify="center">
-                <NavbarItem>
-                    <Link color="foreground" href="#">
-                        Features
-                    </Link>
-                </NavbarItem>
-                <NavbarItem isActive>
-                    <Link aria-current="page" href="#">
-                        Customers
-                    </Link>
-                </NavbarItem>
-                <NavbarItem>
-                    <Link color="foreground" href="#">
-                        Integrations
-                    </Link>
-                </NavbarItem>
+                {navbarItems.map((item, index) => (
+                    <NavbarItem key={index} isActive={location.pathname === item.link}>
+                        <Link
+                            color={location.pathname === item.link ? "primary" : "foreground"}
+                            href={item.link}
+                        >
+                            {item.title}
+                        </Link>
+                    </NavbarItem>
+                ))}
             </NavbarContent>
             <NavbarContent justify="end">
                 <NavbarItem className="hidden lg:flex">

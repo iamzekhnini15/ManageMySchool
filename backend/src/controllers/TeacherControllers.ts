@@ -22,12 +22,7 @@ export class TeacherController {
     }
 
     async addTeacher(req: Request, res: Response): Promise<void> {
-        const teacherData = {
-            name: "Test Teacher",
-            speciality: "Test Speciality",
-            qualification: "Test Qualification",
-            teaching_preferences: { test: "test" }
-        };
+        const teacherData = req.body;
 
         try {
 

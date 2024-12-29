@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import axios from 'axios';
 import {
     Card,
@@ -9,11 +9,9 @@ import {
     Spacer
 } from "@nextui-org/react";
 import { LayoutGroup } from 'framer-motion';
-import { ThemeSwitcher } from '../components/ThemeSwitcher';
-import Header from '../components/Header';
 
-const CreateClassForm = (e: any) => {
-
+const CreateClassForm = () => {
+    
     useEffect(() => {
         fetchTeachers();
     }, []);
@@ -55,7 +53,6 @@ const CreateClassForm = (e: any) => {
 
     return (
         <LayoutGroup>
-            <Header />
             <Card className="p-6 max-w-xl mx-auto">
                 <h2 className="text-2xl font-bold mb-4">Create New Class</h2>
                 <form onSubmit={handleSubmit}>
