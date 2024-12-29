@@ -47,7 +47,7 @@ export class User {
     @JoinColumn({ name: "roleId" })
     role: Role;
 
-    @OneToMany(() => Student, student => student.user)
+    @OneToMany(() => Student, student => student.userId)
     students: Student[];
 
     @OneToMany(() => Teacher, teacher => teacher.user)

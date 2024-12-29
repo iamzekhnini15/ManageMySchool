@@ -51,7 +51,7 @@ const DateForm: React.FC = () => {
     console.log(data.roleId);
 
     try {
-      const response = await fetch('http://localhost:3000/api/students/create', {
+      const response = await fetch('http://localhost:5000/api/students/create', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

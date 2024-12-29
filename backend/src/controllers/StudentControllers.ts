@@ -4,9 +4,9 @@ import { Student } from "../models/Student";
 import { User } from "../models/User";
 
 const roleMap = new Map<string, string>([
-    ['student', '6ad0fc70-9d6c-45a6-b8e8-260d7c6b0dc2'],
-    ['teacher', '2211e63e-51a0-4d0a-a1c7-9e583a896ffc'],
-    ['admin', '00d20780-de60-49f5-8db0-c6294c1143a1']
+    ['student', 'ccd5bebf-e5e4-454b-9840-4d8f912a1ffa'],
+    ['teacher', 'f4d7c9b1-0858-43e6-9199-2cc854570f5a'],
+    ['admin', '1edd6334-9512-4207-bf18-463f3c7fd930']
   ]);
 
 export class StudentController {

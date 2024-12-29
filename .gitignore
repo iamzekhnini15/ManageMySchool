@@ -4,18 +4,7 @@ node_modules/
 # Fichiers de build
 /frontend/dist
 /backend/dist
-/backend/package-lock.json
-/backend/package.json
-/backend/tsconfig.json
 /backend/sql.sql
-/frontend/tsconfig.json
-/frontend/tsconfig.app.json
-/frontend/tsconfig.node.json
-/frontend/tailwind.config.json
-/frontend/jest.config.js
-/frontend/package-lock.json
-/frontend/package.json
-/frontend/postcss.config.js
 
 # Fichiers d'environnement
 .env

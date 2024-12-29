@@ -20,11 +20,11 @@ function App() {
             <Route element={<PublicLayout />}>
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
+              <Route path="/createStudent" element={<CreateStudent />} />
             </Route>
             <Route element={<AuthenticatedLayout />}>
               <Route path="/classes" element={<Class />} />
               <Route path="/teachers" element={<Teachers />} />
-              <Route path="/createStudent" element={<CreateStudent />} />
             </Route>
           </Routes>
         </Router>
